@@ -1,0 +1,46 @@
+
+
+@media (max-width: 600px) {
+  .navbar-contents,
+  .btn {
+    display: none !important;
+  }
+  .logo {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  .navbar-contents,
+  .btn {
+    display: none !important;
+  }
+  .logo {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 0;
+    display: block;
+  }
+  body {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .h1-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .p-homepage {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 368px){
+    .h1-title {
+        line-height: normal;
+    }
+}

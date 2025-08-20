@@ -1,0 +1,193 @@
+:root {
+  --primary-background-color: black;
+
+  --primary-text-color: white;
+
+  --secondary--btn--gradient: linear-gradient(90deg, #0009CD 15%, #00D7FF 100%);
+
+  --secondary-color: #5800FF;
+
+
+  --font--style--: 'Poppins', sans-serif;
+}
+
+html{
+    margin: 0, 0;
+}
+
+
+body{
+    display: block;
+  font-family: var(--font--style--);
+  color: var(--primary-text-color);
+    margin-right: 70px;
+    margin-left: 70px;
+    background-color: var(--primary-background-color);
+}
+
+h1{
+    line-height: 0.5; /* reduces vertical spacing */
+  
+}
+
+.h1-title{
+    font-size: 72px;;
+    color: var(--primary-text-color);
+}
+
+.p-homepage{
+    font-size: 16px;
+    color: var(--primary-text-color);
+    
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    gap: 30vh;
+    align-items: center;
+    
+}
+
+.logo{
+    background-image: url("./assets/aesthetic.__3_-removebg-preview\ \(1\).png");
+    background-position: center;
+    width: 15%;
+    height: 100%;
+    background-size: cover; /* or contain, depending on your goal */  
+    background-repeat: no-repeat;
+}
+
+.btn{
+     all: unset;
+     width: fit-content;
+     padding-left: 16px;
+     padding-right: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    height: 52px;
+    font-family: var(--font--style--);
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    border-radius: 30px;
+   border-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.btn-secondary{
+   all: unset;
+   background: var(--secondary--btn--gradient);   
+     width: fit-content;
+     padding-left: 16px;
+     padding-right: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    height: 52px;
+    font-family: var(--font--style--);
+    font-weight: 600;
+      color: var(--primary-text-color);
+    border-radius: 30px;
+   border-color: var(--secondary--btn--gradient);
+    cursor: pointer;
+}
+
+
+
+
+.btn:hover {
+  background-color: #4000c8; /* darker shade */
+}
+
+.btn-secondary:hover {
+  /* Combine translateY(0) with scale for hover */
+  transform: scale(1.07);
+  filter: brightness(1.2) saturate(1.2);
+  box-shadow: 0 4px 24px 0 rgba(0, 215, 255, 0.25);
+}
+
+.navbar-contents {
+  display: flex;
+  gap: 3.1857rem; /* consistent gap */
+}
+
+.navbar-contents a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-contents a:hover {
+  color: var(--secondary-color);
+}
+
+.hero-section{
+    height: 85vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.spline-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* allows clicks to pass through */
+    opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4,0,0.2,1);
+
+}
+
+.spline-bg.spline-loaded {
+  opacity: 1;
+}
+
+.hero-section > *:not(.spline-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Add smooth scaling animation to buttons */
+.btn,
+.btn-secondary {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  
+}
+
+.btn:hover,
+.btn-secondary:hover {
+  transform: scale(1.07);
+}
+
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(32px) scale(1);
+  animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.fade-in-up[style*="animation-delay"] {
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
